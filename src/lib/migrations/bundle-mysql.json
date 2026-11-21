@@ -386,6 +386,12 @@
         "CREATE INDEX `calendar_invite_tombstones_user_idx` ON `calendar_invite_tombstones` (`user_id`);",
         "CREATE INDEX `calendar_occurrence_responses_event_idx` ON `calendar_occurrence_responses` (`event_id`);"
       ]
+    },
+    {
+      "name": "0018_approve_own_sends.sql",
+      "statements": [
+        "ALTER TABLE `api_keys` ADD `can_approve_own_sends` boolean DEFAULT false NOT NULL;"
+      ]
     }
   ]
 }
