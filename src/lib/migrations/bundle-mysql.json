@@ -386,6 +386,14 @@
         "CREATE INDEX `calendar_invite_tombstones_user_idx` ON `calendar_invite_tombstones` (`user_id`);",
         "CREATE INDEX `calendar_occurrence_responses_event_idx` ON `calendar_occurrence_responses` (`event_id`);"
       ]
+    },
+    {
+      "name": "0017_vacation_responder.sql",
+      "statements": [
+        "ALTER TABLE `mailboxes` ADD `auto_reply_start_at` bigint;",
+        "ALTER TABLE `mailboxes` ADD `auto_reply_end_at` bigint;",
+        "ALTER TABLE `mailboxes` ADD `auto_reply_activated_at` bigint;"
+      ]
     }
   ]
 }
